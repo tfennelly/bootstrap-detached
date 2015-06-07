@@ -12,7 +12,7 @@ The idea is that this module would be used in conjunction with jquery-detached.
 
 E.g.:
 
-```
+```javascript
 var $ = require('jquery-detached-2.1.4').newJQuery();            
 var bootstrap = require('bootstrap-detached-3.3');
 
