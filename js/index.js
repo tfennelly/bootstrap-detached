@@ -1,3 +1,19 @@
+var $bs;
+
+exports.getBootstrap = function() {
+    if (!$bs) {
+        var jquery = require('jquery-detached-2.1.4');
+        
+        $bs = jquery.newJQuery();        
+        exports.addToJQuery($bs);
+    }
+    return $bs;
+};
+
+exports.clear = function() {
+    $bs = undefined;
+};
+
 exports.addToJQuery = function ($) {
     var window = require('window-handle').getWindow();
     var _$ = window.$;
@@ -24,4 +40,4 @@ exports.addToJQuery = function ($) {
         window.$ = _$;
         window.jQuery = _jQuery;
     }
-}
+};

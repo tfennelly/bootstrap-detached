@@ -9,20 +9,25 @@ describe("index.js", function () {
 
     it("- test", function (done) {
         testUtil.onPage(function(window) {
-            var $ = require("jquery-detached-2.1.4").getJQuery();            
             var bootstrap = require("../js/index");
             
-            bootstrap.addToJQuery($);
+            bootstrap.clear();
             
-            expect($.fn.jquery).toBe('2.1.4');
+            var $1 = bootstrap.getBootstrap();            
+            
+            expect($1.fn.jquery).toBe('2.1.4');
 
             expect(window.$).not.toBeDefined();
             expect(window.jQuery).not.toBeDefined();
 
-            expect($('#divOnPage').text()).toBe('Bootstrap is everywhere');
-            expect($.fn.modal).toBeDefined();
-            expect($.fn.dropdown).toBeDefined();            
+            expect($1('#divOnPage').text()).toBe('Bootstrap is everywhere');
+            expect($1.fn.modal).toBeDefined();
+            expect($1.fn.dropdown).toBeDefined();            
    
+            bootstrap.clear();
+            var $2 = bootstrap.getBootstrap();            
+            expect($1).not.toBe($2);
+
             done();
         });
     });
