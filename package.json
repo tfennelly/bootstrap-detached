@@ -1,8 +1,8 @@
 {
   "name": "bootstrap-detached-3.3",
-  "version": "3.3.4-v4",
+  "version": "3.3.4-v5",
   "description": "Module for creating Twitter Bootstrap instances, detached from the global namespace (window).",
-  "main": "js/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

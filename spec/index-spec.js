@@ -9,7 +9,7 @@ describe("index.js", function () {
 
     it("- test", function (done) {
         testUtil.onPage(function(window) {
-            var bootstrap = require("../js/index");
+            var bootstrap = require("../index");
             
             bootstrap.clear();
             
