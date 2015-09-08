@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-detached-3.3",
+  "name": "bootstrap-detached",
   "version": "3.3.4-v5",
   "description": "Module for creating Twitter Bootstrap instances, detached from the global namespace (window).",
   "main": "index.js",
